@@ -84,6 +84,7 @@ var CACHED_URLS = [
     BASE_PATH + 'images/SnakeImage.jpg',
     BASE_PATH + 'images/Tiger.jpg',
     BASE_PATH + 'images/TodaysSchedule.PNG',
+    BASE_PATH + 'images/Fox.PNG',
 
     
      
