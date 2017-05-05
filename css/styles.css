@@ -1,0 +1,561 @@
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.no--select {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+p{
+text-align: justify;
+padding:5px;
+}
+
+h3{
+      font-size: 15px;
+      text-align: center;
+      }
+
+/* MAIN styles */
+
+body {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.app-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  background-color: #e05321;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
+}
+
+img.FoxIcon{
+ max-width: 120px;  
+ max-height:60px;
+position: fixed;
+left: 47.5%;
+right:49%
+}
+
+img.Fox{
+ max-width: 800px;  
+ max-height:250px;
+}
+
+.card__spinner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.16);
+  display: none;
+}
+
+.card__spinner::after {
+  content: "Loading...";
+  color: #1E88E5;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 380px;
+  font-size: 18px;
+}
+
+.card__spinner.show {
+  display: block;
+}
+
+.card {
+  width: 280px;
+  min-height: 280px;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 2px;
+  position: relative;
+}
+
+.card__title,
+.card__desc {
+  display: block;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card__title {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.card__temp {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.card__following,
+.card__followers {
+  padding: 10px 20px 5px;
+}
+
+.card__desc {
+  padding: 12px 15px;
+  vertical-align: top;
+}
+
+.card__img {
+  width: 80px;
+  height: 60px;
+  display: block;
+  margin: 20px auto 10px;
+  border-radius: 50%;
+}
+
+
+.masthead-nav {
+    background-color: #fff;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 56px;
+    padding-top: 10px;
+}
+
+.masthead-nav>a.selected {
+    color: #000;
+    border-color: #000;
+}
+
+.masthead-nav>a {
+    display: inline-block;
+    height: 41px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+    font-size: 13px;
+    margin-right: 20px;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+.header__icon {
+  width: 48px;
+  height: 48px;
+  margin: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header__icon:active {
+  opacity: 0.8;
+  outline: 1px solid #fff;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 20px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.menu {
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  -webkit-transition: transform 0.3s cubic-bezier(0, 0, 0.30, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.30, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.30, 1);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.30, 1);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.30, 1), -webkit-transform 0.3s cubic-bezier(0, 0, 0.30, 1);
+  -webkit-transform: translateX(-110%);
+  transform: translateX(-110%);
+  will-change: transform;
+  z-index: 2;
+}
+
+img.LionHome {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:15px;
+}
+
+img.TigerHome {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+  width:500px;
+}
+
+
+
+img.BirdHome {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+  width:250px;
+  height:200px;
+  float:left;
+}
+
+img.Buzzard {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+  width:350px;
+  height:300px;
+}
+
+img.Today {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+  width:250px;
+  height:200px;
+}
+
+
+article.maincontent{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label.maincontent{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.Facts {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+  width:200px;
+}
+
+p.TodaySchedule{
+text-align: left;
+}
+
+
+.menu__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: opacity 0.15s cubic-bezier(0, 0, 0.30, 1);
+  transition: opacity 0.15s cubic-bezier(0, 0, 0.30, 1);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+.app__content {
+  width: 500px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 56px;
+  padding-top: 10px;
+}
+
+.app-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#maincontent label {
+	display: block;
+    margin-left: auto;
+  margin-right: auto;
+   
+}
+
+form {
+   
+  display:block;
+  text-align: center;
+  padding-bottom:20px;
+  margin-left: auto;
+  margin-right: auto;
+    
+
+}
+
+
+#maincontent input[type=text] {
+	
+	margin-bottom: 20px;
+	width: 100%;
+	
+	border: 1px solid #0000;
+    margin-bottom: 6px;
+    padding: 5px !important;
+	
+	font-size: 0.9em;
+ 
+    
+}
+
+ #maincontent input[id=response] {
+          
+          height:80px;
+     
+          
+          
+      }
+
+#maincontent input[type=submit] {
+    margin-top:50px;
+}
+
+
+
+
+#maincontent textarea {
+	
+	margin-bottom: 10px;
+	width: 100%;
+	
+	border: 1px solid #D6751E;
+    margin-bottom: 6px;
+    padding: 5px !important;
+	
+	font-size: 0.9em;
+  
+}
+
+
+#ZooLocation.offline-map {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image:'images/offlinemap.png';
+    padding-bottom:20px;
+}
+
+#ZooLocation {
+    height:300px;
+    padding-bottom:60px;
+}
+
+
+
+
+/* ----------- iPhone 5 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+ header {
+  
+  width: 100%;
+  height: 70px;
+}    
+      
+.masthead-nav>a {
+    display: inline-block;
+    height: 20px;
+    line-height: 24px;
+}
+      
+img.FoxIcon{
+ max-width: 120px;  
+ max-height:55px;
+ position: fixed;
+ left: 43%;
+ right:45%
+}
+       h1{
+      font-size: 22px;
+      text-align: center;
+      }
+  }
+
+ h2{
+      font-size: 18px;
+      text-align: center;
+      }
+  }
+
+
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      
+    
+ header {
+  
+  width: 100%;
+  height: 70px;
+}
+      
+.masthead-nav>a {
+    display: inline-block;
+    height: 30px;
+    line-height: 34px;
+}
+      
+.app__content {
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 56px;
+  padding-top: 10px;
+}      
+      
+      
+img.FoxIcon{
+ max-width: 120px;  
+ max-height:60px;
+ position: fixed;
+ left: 40%;
+ right:40%
+}
+      h1{
+      font-size: 20px;
+      text-align: center;
+      }
+}
+
+img.LionHome {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+}
+
+      
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+     header {
+  
+  width: 100%;
+  height: 70px;
+}    
+
+img.FoxIcon{
+ max-width: 120px;  
+ max-height:65px;
+ position: fixed;
+ left: 46%;
+ right:45%
+} 
+      
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "picture": "images/Events/AfricanLion.PNG",
+        "heading": "Feed The Lions",
+        "Text": "At: 12:30pm",
+    },
+    {
+        "picture": "images/eventsimages/article2.jpg",
+        "heading": "Birds Of Prey Talk",
+        "text": "At: 2:00pm",
+    },
+    {
+        "picture": "images/eventsimages/article3.jpg",
+        "heading": "Meet A Snake",
+        "text": "At: 5:15pm",
+    },
+    
+]

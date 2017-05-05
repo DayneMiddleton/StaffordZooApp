@@ -1,0 +1,1 @@
+document.getElementById('ZooLocation').classList.add('offline-map');
