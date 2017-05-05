@@ -24,12 +24,12 @@ function showPage() {
 
 
 const TodaysSchedule = document.getElementById('TodaysScheduleJSONInfo');
-if(footballMatchStats){
+if(TodaysSchedule){
     fetch("events.json")
         .then(response => {
             return response.json();
-        }).then(footballMatchJSONinfo => {
-            const footballMatchJSONinfoHTML = footballMatchJSONinfo.map(event => {
+        }).then(TodaysScheduleJSONInfo=> {
+            const TodaysSchedule = TodaysSchedule(event => {
                 return ` <div class="card">
                         <div class="card__container">
                         <img src="${event.image}" alt="AfricanLionImage" longdesc="FeedLionsImageToday" class="Today">
